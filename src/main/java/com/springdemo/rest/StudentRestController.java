@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springdemo.entity.Student;
+import com.springdemo.entity.*;
 
 @RestController
 @RequestMapping("/api")
@@ -25,6 +25,17 @@ public class StudentRestController {
 			theStudents.add(new Student("Mary", "Smith"));
 				
 			return theStudents;
+		}
+		
+		@GetMapping("/teachers")
+		public List<Teachers> getTeachers(){
+			
+			List<Teachers> teachers = new ArrayList<>();
+			teachers.add(new Teachers("Bob","Mike"));
+			teachers.add(new Teachers("Rob","Dunkan"));
+			teachers.add(new Teachers("Kyle","Zeke"));
+			
+			return teachers;
 		}
 		
 }
