@@ -10,6 +10,8 @@
 	
 <!-- <a href="api/students">list of students</a>   -->	
 <a href="${pageContext.request.contextPath}/api/students">List of Students</a>
+<br>
+<a href="${pageContext.request.contextPath}/api/teachers">List of Teachers</a>
 
 </body>
 </html>
